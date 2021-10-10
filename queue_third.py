@@ -7,7 +7,7 @@ last_recall = last_recall()
 
 def main():
     credentials = pika.PlainCredentials('user', 'Qq1234567!')
-    parameters = pika.ConnectionParameters('localhost', 5673, '/', credentials)
+    parameters = pika.ConnectionParameters('192.168.40.10', 5673, '/', credentials)
     connection = pika.BlockingConnection(parameters)
     channel = connection.channel()
 

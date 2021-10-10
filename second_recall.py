@@ -5,7 +5,7 @@ from datetime import datetime
 def second_recall():
     try:
         with connect(
-                host="127.0.0.1",
+                host="192.168.40.10",
                 user="asteruser",
                 password="12345678",
                 database="asteriskcdrdb",

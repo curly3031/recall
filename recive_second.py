@@ -6,7 +6,7 @@ from asterisk.ami import AMIClientAdapter
 
 def callback(ch, method, properties, body):
     if body:
-        client = AMIClient(address='127.0.0.1', port=5038)
+        client = AMIClient(address='192.168.40.10', port=5038)
         client.login(username='admin', secret='111')
         body = str(body)
         body = body.replace('b', '')
@@ -26,7 +26,7 @@ def callback(ch, method, properties, body):
 
 def main():
     credentials = pika.PlainCredentials('user', 'Qq1234567!')
-    parameters = pika.ConnectionParameters('localhost', 5673, '/', credentials)
+    parameters = pika.ConnectionParameters('192.168.40.10', 5673, '/', credentials)
     connection = pika.BlockingConnection(parameters)
 
     channel = connection.channel()
