@@ -13,7 +13,7 @@ def last_recall():
             time = datetime.today().date()
             with connection.cursor() as cursor:
                 query = f"SELECT calldate, clid, src, dst, disposition, uniqueid, processed, is_second, is_third FROM "\
-                        f"`cdr` WHERE is_second=1 and is_third=0 and disposition !='ANSWERED' and LENGTH(src) <= 4 "\
+                        f"`cdr` WHERE is_second=1 and is_third=0 and processed=1 and disposition !='ANSWERED' and LENGTH(src) <= 4 "\
                         f"and calldate LIKE '%{time}%' ORDER BY calldate DESC LIMIT 1 "
                 cursor.execute(query)
                 result = cursor.fetchall()
