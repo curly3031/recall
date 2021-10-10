@@ -1,0 +1,6 @@
+__pycache__/*
+bin/*
+include/*
+lib/*
+log_first_recall.txt
+pyvenv.cfg

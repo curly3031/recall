@@ -1,0 +1,4 @@
+asterisk-ami==0.1.6
+mysql-connector-python==8.0.26
+pika==1.2.0
+protobuf==3.18.1
